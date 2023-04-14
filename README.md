@@ -3,7 +3,7 @@ Smart battery Analysis
 1. `cd` into your new directory
 
      cd napari-battery
-     # you probably want to install your new package into your env
+     #you probably want to install your new package into your env
      pip install -e .
 2. Create a github repository for your plugin:
    https://github.com/new
