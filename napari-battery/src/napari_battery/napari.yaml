@@ -1,0 +1,86 @@
+# 추후 수정 - name, display_name 등의 metadata
+name: napari-battery
+display_name: Smart Battery Analysis
+contributions:
+  commands:
+    # cookiecutter에서 미리 짜둔 틀(예시)
+    # 아래의 코드를 조금씩 수정!
+    - id: napari-battery.get_reader
+      python_name: napari_battery._reader:napari_get_reader
+      title: Open data with Smart Battery Analysis
+    - id: napari-battery.write_multiple
+      python_name: napari_battery._writer:write_multiple
+      title: Save multi-layer data with Smart Battery Analysis
+    - id: napari-battery.write_single_image
+      python_name: napari_battery._writer:write_single_image
+      title: Save image data with Smart Battery Analysis
+    - id: napari-battery.make_sample_data
+      python_name: napari_battery._sample_data:make_sample_data
+      title: Load sample data from Smart Battery Analysis
+    - id: napari-battery.make_qwidget
+      python_name: napari_battery._widget:ExampleQWidget
+      title: Make example QWidget
+    - id: napari-battery.make_magic_widget
+      python_name: napari_battery._widget:example_magic_widget
+      title: Make example magic widget
+    # - id: napari-battery.make_func_widget 
+    #   python_name: napari_battery._widget:example_function_widget
+    #   title: Make example function widget
+
+
+
+      # _widget.py파일에 detect_spots라는 widget을 추가
+      # id는 그대로 두고 python_name과 title만 수정
+    - id: napari-battery.make_func_widget 
+      python_name: napari_battery._widget:detect_spots
+      title: example_Make spot detection widget
+      ###
+
+      # _widget.py파일에 blurred image를 위한 widget 추가
+      # id는 그대로 두고 python_name과 title만 수정
+      # id: napari-battery.make_blur_widget
+      # python-name: napari_battery._widget:gaussian_high_pass
+      # title: example_Blurred Image widget
+
+
+
+  readers:
+    - command: napari-battery.get_reader
+      accepts_directories: false
+      filename_patterns: ['*.npy']
+  writers:
+    - command: napari-battery.write_multiple
+      layer_types: ['image*','labels*']
+      filename_extensions: []
+    - command: napari-battery.write_single_image
+      layer_types: ['image']
+      filename_extensions: ['.npy']
+  sample_data:
+    - command: napari-battery.make_sample_data
+      display_name: Smart Battery Analysis
+      key: unique_id.1
+  widgets:
+    # cookiecutter에서 미리 짜둔 틀 (예시)
+    - command: napari-battery.make_qwidget
+      display_name: Example QWidget
+    - command: napari-battery.make_magic_widget
+      display_name: Example Magic Widget
+    # - command: napari-battery.make_func_widget
+    #   autogenerate: true
+    #   display_name: Example Function Widget
+    
+
+
+    # Custom하게 짠 widget 파일
+    # _widget.py 파일에 detect_spots라는 widget을 추가
+    # command, autogenerate는 그대로 두고 display_name만 수정함
+    - command: napari-battery.make_func_widget
+      autogenerate: true
+      display_name: Example_Spot Detection
+
+    
+    # _widget.py 파일에 blurred라는 widget을 추가
+    # command, autogenerate는 그대로 두고 display_name만 수정함
+      # command: napari-battery.make_blur_widget
+      # autogenerate: true
+      # display_name: Example_Blur
