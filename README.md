@@ -96,7 +96,7 @@ pip install -e .
      
      
      
-<hr> <hr>     
+<br> <br> <br> <br> <br> <br> <br> <br> <br> <br>  <hr> <hr> 
 <br> 기존 cookie cutter 만들었을 때 자동 생성되었던 README.md 내용     
      
 1. `cd` into your new directory
