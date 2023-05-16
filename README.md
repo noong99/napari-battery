@@ -1,5 +1,8 @@
-# 이차전지 공동연구
+### 이차전지 공동연구
 Battery Analysis
+<b> napari-battery 파일 내(setup.cfg 있는 위치)에서 <code>pip install -e . </code>
+
+
 1. `cd` into your new directory
 
      cd napari-battery
