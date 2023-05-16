@@ -25,23 +25,7 @@ contributions:
       title: Make example magic widget
     # - id: napari-battery.make_func_widget 
     #   python_name: napari_battery._widget:example_function_widget
-    #   title: Make example function widget
-
-
-
-      # _widget.py파일에 detect_spots라는 widget을 추가
-      # id는 그대로 두고 python_name과 title만 수정
-    - id: napari-battery.make_func_widget 
-      python_name: napari_battery._widget:detect_spots
-      title: example_Make spot detection widget
-      ###
-
-      # _widget.py파일에 blurred image를 위한 widget 추가
-      # id는 그대로 두고 python_name과 title만 수정
-      # id: napari-battery.make_blur_widget
-      # python-name: napari_battery._widget:gaussian_high_pass
-      # title: example_Blurred Image widget
-
+    #   title: Make example function widge
 
 
   readers:
@@ -69,18 +53,3 @@ contributions:
     #   autogenerate: true
     #   display_name: Example Function Widget
     
-
-
-    # Custom하게 짠 widget 파일
-    # _widget.py 파일에 detect_spots라는 widget을 추가
-    # command, autogenerate는 그대로 두고 display_name만 수정함
-    - command: napari-battery.make_func_widget
-      autogenerate: true
-      display_name: Example_Spot Detection
-
-    
-    # _widget.py 파일에 blurred라는 widget을 추가
-    # command, autogenerate는 그대로 두고 display_name만 수정함
-      # command: napari-battery.make_blur_widget
-      # autogenerate: true
-      # display_name: Example_Blur
