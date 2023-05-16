@@ -1,5 +1,5 @@
 ### 이차전지 공동연구
-<hr>
+<r>
 유사한 목적의 소프트웨어 - napari 기반       
 https://www.youtube.com/watch?v=Km1_TnUQ4FM
 <hr>
