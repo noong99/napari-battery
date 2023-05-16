@@ -1,5 +1,5 @@
-# smart_battery
-Smart battery Analysis
+# 이차전지 공동연구
+Battery Analysis
 1. `cd` into your new directory
 
      cd napari-battery
